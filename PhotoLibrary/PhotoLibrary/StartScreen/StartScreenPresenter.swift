@@ -9,13 +9,9 @@
 
 import Foundation
 
-// MARK: View -
-protocol StartScreenViewProtocol: class {
-
-}
 
 // MARK: Presenter -
-protocol StartScreenPresenterProtocol: class {
+protocol StartScreenPresenterProtocol {
 	var view: StartScreenViewProtocol? { get set }
     func viewDidLoad()
 }

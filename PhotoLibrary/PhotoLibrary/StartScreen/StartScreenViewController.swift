@@ -9,6 +9,11 @@
 
 import UIKit
 
+// MARK: View -
+protocol StartScreenViewProtocol: AnyObject {
+
+}
+
 class StartScreenViewController: UIViewController, StartScreenViewProtocol {
 
 	var presenter: StartScreenPresenterProtocol = StartScreenPresenter()
