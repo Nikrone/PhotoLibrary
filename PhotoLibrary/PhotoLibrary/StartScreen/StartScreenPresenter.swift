@@ -14,6 +14,7 @@ import Foundation
 protocol StartScreenPresenterProtocol {
 	var view: StartScreenViewProtocol? { get set }
     func viewDidLoad()
+    func passwordVerification()
 }
 
 class StartScreenPresenter: StartScreenPresenterProtocol {
@@ -21,6 +22,15 @@ class StartScreenPresenter: StartScreenPresenterProtocol {
     weak var view: StartScreenViewProtocol?
 
     func viewDidLoad() {
-
+        
     }
+    
+    
+    
+    let password = "123"
+    
+    func passwordVerification() {
+        
+    }
+    
 }
