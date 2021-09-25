@@ -25,12 +25,8 @@ class StartScreenPresenter: StartScreenPresenterProtocol {
         
     }
     
-    
-    
-    let password = "123"
-    
     func passwordVerification() {
-        
+    
     }
     
 }

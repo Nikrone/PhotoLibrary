@@ -22,7 +22,6 @@ class StartScreenViewController: UIViewController, StartScreenViewProtocol {
     
     var presenter: StartScreenPresenterProtocol = StartScreenPresenter()
 
-    
     let password: String = "123"
     
     override func viewDidLoad() {
@@ -41,9 +40,13 @@ class StartScreenViewController: UIViewController, StartScreenViewProtocol {
             }
             navigationController?.pushViewController(photoLibraryViewController, animated: true)
         } else {
-            return
-        }
+            let alert = UIAlertController(title: "Неверный пароль...", message: "Попробуйте ввести пароль ещё раз.", preferredStyle: .alert)
 
+            alert.addAction(UIAlertAction(title: "Попробовать ещё раз", style: .cancel, handler: nil))
+
+            self.present(alert, animated: true)
+        }
     }
+    
     
 }
