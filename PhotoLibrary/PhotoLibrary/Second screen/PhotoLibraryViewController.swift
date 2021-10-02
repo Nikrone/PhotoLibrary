@@ -15,6 +15,7 @@ protocol PhotoLibraryViewProtocol: AnyObject {
 }
 
 class PhotoLibraryViewController: UIViewController, PhotoLibraryViewProtocol {
+    @IBOutlet private weak var tableView: UITableView!
 
 	var presenter: PhotoLibraryPresenterProtocol = PhotoLibraryPresenter()
 
@@ -23,6 +24,27 @@ class PhotoLibraryViewController: UIViewController, PhotoLibraryViewProtocol {
 
         presenter.view = self
         presenter.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 
+}
+
+extension PhotoLibraryViewController: UITableViewDelegate {
+    
+}
+
+extension PhotoLibraryViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = "Section"
+        return cell
+    }
+    
+    
 }

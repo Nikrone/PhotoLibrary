@@ -30,6 +30,10 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Eb1-RC-lAy">
+                                <rect key="frame" x="0.0" y="44" width="414" height="772"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нет фотографий" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UkL-MR-uT5">
                                 <rect key="frame" x="62" y="428" width="290" height="40.5"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="35"/>
@@ -40,23 +44,33 @@
                         <viewLayoutGuide key="safeArea" id="lO1-Lq-3c2"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Eb1-RC-lAy" firstAttribute="leading" secondItem="lO1-Lq-3c2" secondAttribute="leading" id="ELM-Yq-qy7"/>
+                            <constraint firstItem="Eb1-RC-lAy" firstAttribute="top" secondItem="lO1-Lq-3c2" secondAttribute="top" id="ELe-ih-gMT"/>
+                            <constraint firstItem="PdM-iq-5Xm" firstAttribute="top" secondItem="Eb1-RC-lAy" secondAttribute="bottom" id="QPa-L3-XZP"/>
                             <constraint firstItem="PdM-iq-5Xm" firstAttribute="centerX" secondItem="dHv-Ld-GZd" secondAttribute="centerX" id="T4b-9y-gZr"/>
                             <constraint firstItem="UkL-MR-uT5" firstAttribute="centerX" secondItem="dHv-Ld-GZd" secondAttribute="centerX" id="TJe-Df-hCx"/>
+                            <constraint firstItem="lO1-Lq-3c2" firstAttribute="trailing" secondItem="Eb1-RC-lAy" secondAttribute="trailing" id="ZeD-0r-dAo"/>
                             <constraint firstItem="lO1-Lq-3c2" firstAttribute="trailing" secondItem="PdM-iq-5Xm" secondAttribute="trailing" constant="20" id="gz6-oB-gHG"/>
                             <constraint firstItem="PdM-iq-5Xm" firstAttribute="bottom" secondItem="lO1-Lq-3c2" secondAttribute="bottom" id="lc1-jh-6Be"/>
                             <constraint firstItem="UkL-MR-uT5" firstAttribute="centerY" secondItem="dHv-Ld-GZd" secondAttribute="centerY" id="rii-oR-aJI"/>
                             <constraint firstItem="PdM-iq-5Xm" firstAttribute="leading" secondItem="lO1-Lq-3c2" secondAttribute="leading" constant="20" id="vMo-n4-oTn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Eb1-RC-lAy" id="YRu-uy-bdb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7B-uH-bVm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112" y="89"/>
+            <point key="canvasLocation" x="111.59420289855073" y="88.392857142857139"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
