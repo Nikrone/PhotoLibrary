@@ -14,7 +14,7 @@ protocol PhotoLibraryViewProtocol: AnyObject {
 
 }
 
-class PhotoLibraryViewController: UIViewController, PhotoLibraryViewProtocol {
+class PhotoLibraryViewController: UIViewController, PhotoLibraryViewProtocol, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     @IBOutlet private weak var tableView: UITableView!
 
 	var presenter: PhotoLibraryPresenterProtocol = PhotoLibraryPresenter()
@@ -29,6 +29,14 @@ class PhotoLibraryViewController: UIViewController, PhotoLibraryViewProtocol {
         tableView.dataSource = self
     }
 
+    @IBAction func buttonPressed() {
+        let picker = UIImagePickerController()
+        
+        picker.allowsEditing = true
+        picker.delegate = self
+        present(picker, animated: true, completion: nil)
+    }
+    
 }
 
 extension PhotoLibraryViewController: UITableViewDelegate {
