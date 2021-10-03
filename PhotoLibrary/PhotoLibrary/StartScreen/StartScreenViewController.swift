@@ -40,7 +40,7 @@ class StartScreenViewController: UIViewController, StartScreenViewProtocol {
             }
             navigationController?.pushViewController(photoLibraryViewController, animated: true)
         } else {
-            let alert = UIAlertController(title: "Неверный пароль...", message: "Попробуйте ввести пароль ещё раз.", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Неверный пароль!", message: "Попробуйте ввести пароль ещё раз.", preferredStyle: .alert)
 
             alert.addAction(UIAlertAction(title: "Попробовать ещё раз", style: .cancel, handler: nil))
 

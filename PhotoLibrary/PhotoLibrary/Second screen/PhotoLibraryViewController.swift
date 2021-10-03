@@ -19,6 +19,7 @@ class PhotoLibraryViewController: UIViewController, PhotoLibraryViewProtocol, UI
 
 	var presenter: PhotoLibraryPresenterProtocol = PhotoLibraryPresenter()
 
+
 	override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,7 +46,7 @@ extension PhotoLibraryViewController: UITableViewDelegate {
 
 extension PhotoLibraryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
